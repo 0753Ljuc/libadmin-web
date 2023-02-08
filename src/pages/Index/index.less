@@ -1,0 +1,75 @@
+.page-index {
+
+  @box_offset_left: 40px;
+  @normal_padding : 20px;
+  @box_content_bgc: #189f91;
+
+  padding-top    : 100px;
+  display        : flex;
+  justify-content: center;
+
+  .box {
+    padding      : @normal_padding;
+    width        : 360px;
+    border-radius: 8px;
+    box-shadow   : 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+    position: relative;
+
+    &-title {
+      position: relative;
+      margin  : @normal_padding 0 @normal_padding -@box_offset_left;
+      padding : 12px 0 12px @box_offset_left;
+
+      font-size  : 20px;
+      font-weight: bold;
+      color      : #fff;
+      background : @box_content_bgc;
+
+      &-text {
+        display     : inline-block;
+        padding-left: @normal_padding;
+      }
+
+      &-shape {
+
+        width         : @normal_padding;
+        height        : 100%;
+        padding-bottom: @normal_padding;
+        z-index       : -1;
+
+        position: absolute;
+        left    : 0;
+        top     : 0;
+
+        overflow: hidden;
+
+        &-mark {
+          width           : 150%;
+          height          : 100%;
+          background-color: #000;
+
+          transform       : rotate(20deg);
+          transform-origin: 0% 100%;
+        }
+      }
+    }
+
+    &-form {
+
+      padding-bottom: @normal_padding;
+      max-width     : 600px;
+
+      &-submit {
+
+        &-btn {
+          width: 100%;
+
+          border-radius   : 0;
+          background-color: @box_content_bgc;
+        }
+      }
+    }
+  }
+
+}
