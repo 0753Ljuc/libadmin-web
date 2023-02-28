@@ -1,10 +1,11 @@
+@import url("@/styles/variables.less");
+
 .page-index {
 
   @box_offset_left: 40px;
   @normal_padding : 20px;
-  @box_content_bgc: #189f91;
+  @box_content_bgc: @hover-text-color;
 
-  padding-top    : 100px;
   display        : flex;
   justify-content: center;
 
@@ -55,20 +56,56 @@
       }
     }
 
-    &-form {
+    &-redirect {
+      text-align: right;
 
-      padding-bottom: @normal_padding;
-      max-width     : 600px;
+      a {
+        color    : #a8a8a8;
+        opacity  : 0.8;
+        font-size: 12px;
+
+        &:hover {
+          opacity: 1;
+          color  : #00b96b;
+        }
+      }
+    }
+
+    &-form {
+      max-width    : 600px;
+      margin-bottom: @normal_padding;
 
       &-submit {
-
         &-btn {
-          width: 100%;
-
-          border-radius   : 0;
+          margin          : 2px 0;
+          width           : 100%;
+          border-radius   : 2px;
           background-color: @box_content_bgc;
         }
       }
+    }
+
+    .radio-group-role {
+      margin-top    : 20px;
+      display       : flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+}
+
+
+.page-index-register {
+
+  .return {
+    color   : @hover-text-color;
+    opacity : 0.5;
+    position: absolute;
+    cursor  : pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity  : 1;
     }
   }
 

@@ -1,0 +1,55 @@
+@import url('@/styles/variables.less');
+
+
+.page-home {
+
+  .layout {
+    min-height: 100vh;
+
+
+
+    .header {
+      background: teal;
+      height    : @header-height;
+
+      display        : flex;
+      justify-content: space-between;
+
+      .avatar {
+        color: #fafafa;
+
+
+        &-logout {
+          font-size: 12px;
+          cursor   : pointer;
+
+          &:hover {
+            font-weight    : 600;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      span {
+        color    : #fafafa;
+        font-size: 26px;
+      }
+    }
+
+    .body {
+
+      height: calc(100vh - @header-height);
+
+      .content {
+        margin    : 0 16px;
+        height    : 100%;
+        overflow-y: scroll;
+      }
+    }
+
+
+  }
+
+
+
+}

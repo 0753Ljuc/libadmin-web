@@ -1,9 +1,7 @@
 import { redirect } from "react-router-dom";
+import { LoaderFunction } from 'react-router-dom'
 
-let auth = true;
 
-function authorize() {
-  return auth ? true : redirect('/');
+export const authorize: LoaderFunction = (args) => {
+  return true
 }
-
-export { authorize };

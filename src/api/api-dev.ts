@@ -1,13 +1,26 @@
 
-const host = "http://localhost:8080";
+const host = "http://localhost:8000";
 
+
+// refer RESTful API design 
 const api = {
   v1: {
     auth: {
-      login: `${host}/api/v1/auth/login`,
-      logout: `${host}/api/v1/auth/logout`,
-      register: `${host}/api/v1/auth/register`,
-      verify: `${host}/api/v1/auth/verify`,
+      signupUser: `${host}/api/v1/auth/user/signup`,
+      loginUser: `${host}/api/v1/auth/user/login`,
+      logoutUser: `${host}/api/v1/auth/user/logout`,
+    },
+    profile: {
+      getProfile: `${host}/api/v1/profile`,
+      getProfiles: `${host}/api/v1/profile/all`,
+    },
+    categoryREST: `${host}/api/v1/category`,
+    bookREST: `${host}/api/v1/book`,
+    borrowREST: `${host}/api/v1/borrow`,
+  },
+  v2: {
+    auth: {
+      signupUser: `${host}/api/v2/auth/user/signup`,
     },
   }
 }
