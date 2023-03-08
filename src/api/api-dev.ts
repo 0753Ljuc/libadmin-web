@@ -1,6 +1,5 @@
-
-const host = "http://localhost:8000";
-
+const isProd = process.env.NODE_ENV === "production";
+const host = isProd ? "http://106.55.24.94:8090" : "http://localhost:8000";
 
 // refer RESTful API design 
 const api = {
